@@ -15,7 +15,10 @@ spec:
       containers:
         - name: test-app
           image: DAFFODIL.ad.slc.net:5000/dave-andrew/my-app:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
+          envFrom:
+          - secretRef:
+              name: managed-secret
           ports:
             - protocol: TCP
               containerPort: 3000
