@@ -12,6 +12,7 @@ spec:
       labels:
         app: test-app
     spec:
+      serviceAccountName: infisical-auth
       containers:
         - name: test-app
           image: DAFFODIL.ad.slc.net:5000/dave-andrew/my-app:latest

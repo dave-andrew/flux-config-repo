@@ -5,4 +5,3 @@ resources:
   - service.yaml
   - httproute.yaml
   - httpsroute.yaml
-  - infisical-secret.yaml
