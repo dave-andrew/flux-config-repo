@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: somen-frontend
+spec:
+  selector:
+    matchLabels:
+      app: somen-frontend
+  template:
+    metadata:
+      labels:
+        app: somen-frontend
+    spec:
+      containers:
+        - name: somen-frontend
+          image: DAFFODIL.ad.slc.net:5000/<user>/<image-name>:<image-version>
+          imagePullPolicy: IfNotPresent
+          ports:
+            - protocol: TCP
+              containerPort: 8080

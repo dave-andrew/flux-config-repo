@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app
+spec:
+  selector:
+    matchLabels:
+      app: test-app
+  template:
+    metadata:
+      labels:
+        app: test-app
+    spec:
+      containers:
+        - name: test-app
+          image: DAFFODIL.ad.slc.net:5000/dave-andrew/my-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - protocol: TCP
+              containerPort: 3000
