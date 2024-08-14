@@ -18,7 +18,7 @@ spec:
           imagePullPolicy: Always
           envFrom:
           - secretRef:
-              name: managed-secret
+              name: test-secret
           ports:
             - protocol: TCP
               containerPort: 3000
