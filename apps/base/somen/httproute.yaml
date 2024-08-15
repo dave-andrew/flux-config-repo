@@ -6,7 +6,7 @@ metadata:
 spec:
   parentRefs:
   - name: traefik
-    sectionName: http
+    sectionName: web
     namespace: traefik
   hostnames:
   - somen.kube.slc.net
