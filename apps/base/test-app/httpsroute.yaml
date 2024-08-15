@@ -7,7 +7,7 @@ metadata:
 spec:
   parentRefs:
   - name: traefik
-    sectionName: https
+    sectionName: websecure
     namespace: traefik
   hostnames:
   - test.kube.slc.net
