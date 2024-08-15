@@ -3,4 +3,3 @@ kind: Kustomization
 namespace: production
 resources:
   - ../../base/test-app
-  - test-app-secret.yaml
