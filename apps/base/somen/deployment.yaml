@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
         - name: somen-frontend
-          image: DAFFODIL.ad.slc.net:5000/<user>/<image-name>:<image-version>
-          imagePullPolicy: IfNotPresent
+          image: DAFFODIL.ad.slc.net:5000/slc/somen-front-end-dev:latest
+          imagePullPolicy: Always
           ports:
             - protocol: TCP
               containerPort: 8080
