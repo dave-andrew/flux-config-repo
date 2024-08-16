@@ -15,7 +15,7 @@ spec:
       serviceAccountName: infisical-auth
       containers:
         - name: test-app
-          image: DAFFODIL.ad.slc.net/dave-andrew/my-app:latest
+          image: DAFFODIL.ad.slc.net:5000/dave-andrew/my-app:latest
           imagePullPolicy: Always
           envFrom:
           - secretRef:
