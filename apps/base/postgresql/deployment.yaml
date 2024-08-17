@@ -14,10 +14,11 @@ spec:
       containers:
         - name: postgresql
           image: postgres
+          serviceName: "postgresql-service"
           imagePullPolicy: Always
           envFrom:
           - secretRef:
-              name: somen-backend-secret
+              name: postgres-secret
           ports:
             - protocol: TCP
               containerPort: 5432
