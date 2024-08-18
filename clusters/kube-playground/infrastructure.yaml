@@ -1,13 +1,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: secrets-dashboard
-  namespace: production
+  name: apps-team-base
+  namespace: flux-system
 spec:
   interval: 60s
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./
+  path: ./infrastructure
   prune: true
   wait: true
