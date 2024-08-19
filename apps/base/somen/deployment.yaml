@@ -15,23 +15,9 @@ spec:
         - name: somen-frontend
           image: DAFFODIL.ad.slc.net:5000/slc/somen-front-end:latest
           imagePullPolicy: Always
-          env:
-          - name: APP_URL
-            value: https://somen.kube.slc.net
-          - name: GRAPHQL_URI
-            value: https://somen-api.apps.slc.net/graphql
-          - name: NEXTAUTH_URL
-            value: https://somen.kube.slc.net
-          - name: NEXTAUTH_SECRET
-            value: Brow
-          - name: ACCOUNTS_URL
-            value: https://accounts.slc.net
-          - name: ACCOUNTS_OAUTH_CLIENT_ID
-            value: 16
-          - name: ACCOUNTS_OAUTH_CLIENT_SECRET
-            value: pxP3B6kWf8Vc9EBOJF3zMyMP1pnTM8f5asDs13mC
-          - name: ACCOUNTS_OAUTH_REDIRECT_URI
-            value: https://somen.kube.slc.net/api/auth/callback/accounts
+          envFrom:
+          - secretRef:
+              name: somen-secret
           ports:
             - protocol: TCP
               containerPort: 3000
