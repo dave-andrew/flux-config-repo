@@ -15,9 +15,15 @@ spec:
         - name: somen-frontend
           image: DAFFODIL.ad.slc.net:5000/slc/somen-front-end:latest
           imagePullPolicy: Always
-          envFrom:
-          - secretRef:
-              name: somen-secret
+          volumeMounts:
+          # name must match the volume name below
+          - name: secret-volume
+            mountPath: /etc/secret-volume
+            readOnly: true
           ports:
             - protocol: TCP
               containerPort: 3000
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: somen-secret
