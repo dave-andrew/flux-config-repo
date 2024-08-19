@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+0kind: Deployment
 metadata:
   name: somen-frontend
 spec:
@@ -18,7 +18,7 @@ spec:
           volumeMounts:
           # name must match the volume name below
           - name: secret-volume
-            mountPath: /etc/secret-volume
+            mountPath: /root/app/.env
             readOnly: true
           ports:
             - protocol: TCP
