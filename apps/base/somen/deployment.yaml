@@ -18,6 +18,15 @@ spec:
           envFrom:
           - secretRef:
               name: somen-secret
+          volumeMounts:
+          - name: somen-secret-volume
+            mountPath: "/etc/secrets"
+            readOnly: true
           ports:
             - protocol: TCP
               containerPort: 3000
+      volumes:
+      - name: somen-secret-volume
+        secret:
+          secretName: somen-secret
+          defaultMode: 0400
