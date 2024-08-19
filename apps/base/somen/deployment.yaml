@@ -16,10 +16,12 @@ spec:
           image: DAFFODIL.ad.slc.net:5000/slc/somen-front-end:latest
           imagePullPolicy: Always
           volumeMounts:
-          # name must match the volume name below
           - name: secret-volume
-            mountPath: /root/app/.env
+            mountPath: /root/app/
             readOnly: true
+          envFrom:
+          - secretRef:
+              name: somen-secret
           ports:
             - protocol: TCP
               containerPort: 3000
