@@ -6,7 +6,7 @@ spec:
   imageRepositoryRef:
     name: somen-frontend-image
   filterTags:
-    pattern: '^latest$'
+    pattern: '^[a-zA-Z]*'
   policy:
     semver:
       range: ">=0.0.0"
