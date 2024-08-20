@@ -16,6 +16,7 @@ spec:
         - name: postgresql
           image: postgres
           imagePullPolicy: Always
+          serviceName: postgres-service
           envFrom:
           - secretRef:
               name: postgres-secret
