@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: postgresql
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: postgresql
@@ -15,7 +15,6 @@ spec:
       containers:
         - name: postgresql
           image: postgres
-          serviceName: "postgresql-service"
           imagePullPolicy: Always
           envFrom:
           - secretRef:
