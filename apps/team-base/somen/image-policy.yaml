@@ -7,4 +7,3 @@ spec:
     name: somen-frontend-image
   filterTags:
     pattern: '^latest$'
-  digest: true
