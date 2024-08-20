@@ -7,6 +7,4 @@ spec:
     name: somen-frontend-image
   filterTags:
     pattern: '^latest$'
-  policy:
-    semver:
-      range: ">=0.0.0"
+  digest: true
