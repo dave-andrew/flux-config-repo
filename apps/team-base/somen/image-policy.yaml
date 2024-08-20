@@ -8,5 +8,5 @@ spec:
   filterTags:
     pattern: '^[a-zA-Z]*'
   policy:
-    semver:
-      range: ">=0.0.0"
+    numerical:
+      order: asc
