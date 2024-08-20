@@ -1,0 +1,12 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: somen-frontend-policy
+spec:
+  imageRepositoryRef:
+    name: somen-frontend-image
+  filterTags:
+    pattern: '^latest$'
+  policy:
+    semver:
+      range: ">=0.0.0"
