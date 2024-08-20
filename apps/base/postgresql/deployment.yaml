@@ -4,6 +4,7 @@ metadata:
   name: postgresql
 spec:
   replicas: 1
+  serviceName: "postgresql-service"
   selector:
     matchLabels:
       app: postgresql
@@ -16,7 +17,6 @@ spec:
         - name: postgresql
           image: postgres
           imagePullPolicy: Always
-          serviceName: postgres-service
           envFrom:
           - secretRef:
               name: postgres-secret
