@@ -1,0 +1,30 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kubernetes-dashboard-release
+  namespace: kubernetes-dashboard
+spec:
+  interval: 1h
+  chart:
+    spec:
+      chart: kubernetes-dashboard
+      version: "*"
+      sourceRef:
+        kind: HelmRepository
+        name: kubernetes-dashboard
+  values:
+    kong:
+      enabled: true
+      ## Configuration reference: https://docs.konghq.com/gateway/3.6.x/reference/configuration
+      env:
+        dns_order: LAST,A,CNAME,AAAA,SRV
+        plugins: 'off'
+        nginx_worker_processes: 1
+      ingressController:
+        enabled: false
+      dblessConfig:
+        configMap: kong-dbless-config
+      proxy:
+        type: LoadBalancer
+        http:
+          enabled: true
