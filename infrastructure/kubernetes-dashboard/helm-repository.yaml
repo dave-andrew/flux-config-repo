@@ -4,5 +4,5 @@ metadata:
   name: kubernetes-dashboard-repository
   namespace: kubernetes-dashboard
 spec:
-  interval: 1h
+  interval: 30m
   url: https://kubernetes.github.io/dashboard/
