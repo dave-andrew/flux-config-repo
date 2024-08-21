@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: kubernetes-dashboard
+  name: kubernetes-dashboard-repository
   namespace: kubernetes-dashboard
 spec:
   interval: 1h

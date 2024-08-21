@@ -7,23 +7,14 @@ spec:
   interval: 1h
   chart:
     spec:
-      chart: kubernetes-dashboard
+      chart: kubernetes-dashboard-release
       version: "*"
       sourceRef:
         kind: HelmRepository
-        name: kubernetes-dashboard
+        name: kubernetes-dashboard-repository
   values:
     kong:
       enabled: true
-      ## Configuration reference: https://docs.konghq.com/gateway/3.6.x/reference/configuration
-      env:
-        dns_order: LAST,A,CNAME,AAAA,SRV
-        plugins: 'off'
-        nginx_worker_processes: 1
-      ingressController:
-        enabled: false
-      dblessConfig:
-        configMap: kong-dbless-config
       proxy:
         type: LoadBalancer
         http:
