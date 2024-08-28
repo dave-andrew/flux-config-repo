@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   parentRefs:
-  - name: traefik
+  - name: traefik-gateway
     sectionName: web
     namespace: traefik
   hostnames:

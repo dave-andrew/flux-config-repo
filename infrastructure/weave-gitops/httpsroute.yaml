@@ -4,10 +4,10 @@ metadata:
   name: gitops-httpsroute
   namespace: flux-system
   labels:
-    gateway: traefik
+    gateway: traefik-gateway
 spec:
   parentRefs:
-  - name: traefik
+  - name: traefik-gateway
     sectionName: websecure
     namespace: traefik
   hostnames:
