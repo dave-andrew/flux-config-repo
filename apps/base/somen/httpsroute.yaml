@@ -10,7 +10,7 @@ spec:
     sectionName: websecure
     namespace: traefik
   hostnames:
-  - somen-kube.apps.slc.net
+  - somen.kube.slc.net
   rules:
   - matches:
     - path:

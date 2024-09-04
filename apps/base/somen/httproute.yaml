@@ -9,7 +9,7 @@ spec:
     sectionName: web
     namespace: traefik
   hostnames:
-  - somen-kube.apps.slc.net
+  - somen.kube.slc.net
   rules:
   - filters:
     - type: RequestRedirect
