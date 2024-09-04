@@ -11,7 +11,7 @@ spec:
     sectionName: websecure
     namespace: traefik
   hostnames:
-  - gitops.apps.slc.net
+  - gitops.kube.slc.net
   rules:
   - matches:
     - path:

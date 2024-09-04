@@ -10,7 +10,7 @@ spec:
     sectionName: web
     namespace: traefik
   hostnames:
-  - gitops.apps.slc.net
+  - gitops.kube.slc.net
   rules:
   - filters:
     - type: RequestRedirect
