@@ -21,4 +21,4 @@ spec:
               name: ruman-secret
           ports:
             - protocol: TCP
-              containerPort: 6969
+              containerPort: 80
