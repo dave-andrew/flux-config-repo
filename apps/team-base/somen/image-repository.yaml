@@ -1,8 +1,0 @@
-apiVersion: image.toolkit.fluxcd.io/v1beta2
-kind: ImageRepository
-metadata:
-  name: somen-frontend-image
-spec:
-  image: DAFFODIL.ad.slc.net:5000/slc/somen-front-end
-  interval: 1m0s
-  insecure: true
