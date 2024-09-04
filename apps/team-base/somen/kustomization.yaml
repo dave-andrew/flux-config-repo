@@ -3,6 +3,3 @@ kind: Kustomization
 namespace: production
 resources:
   - ../../base/somen
-  - image-repository.yaml
-  - image-policy.yaml
-  - image-update-automation.yaml
