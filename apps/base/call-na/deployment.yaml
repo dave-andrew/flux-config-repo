@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: call-na-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: call-na-frontend
+  template:
+    metadata:
+      labels:
+        app: call-na-frontend
+    spec:
+      containers:
+        - name: call-na-frontend
+          image: DAFFODIL.ad.slc.net:5000/slc/call-na-frontend:latest
+          imagePullPolicy: Always
+          envFrom:
+          - secretRef:
+              name: call-na-secret
+          ports:
+            - protocol: TCP
+              containerPort: 80
