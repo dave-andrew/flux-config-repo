@@ -9,7 +9,7 @@ spec:
     sectionName: web
     namespace: traefik
   hostnames:
-  - call-na.kube.slc.net
+  - call.kube.slc.net
   rules:
   - filters:
     - type: RequestRedirect
