@@ -22,7 +22,6 @@ spec:
       size: 10Gi
       deleteEnabled: true
       storageClass: nfs-csi
-      existingClaim: registry-pv-claim
       accessMode: 'ReadWriteOnce'
     garbageCollect:
       enabled: true
