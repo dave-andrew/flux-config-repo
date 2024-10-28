@@ -12,6 +12,9 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: kubernetes-dashboard-repository
+  upgrade:
+    remediation:
+      remediateLastFailuer: false
   values:
     kong:
       enabled: true
