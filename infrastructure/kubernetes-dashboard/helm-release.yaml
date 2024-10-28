@@ -17,7 +17,7 @@ spec:
       remediateLastFailure: true
   values:
     image:
-      repository: kubernetes/dashboard
+      repository: kubernetesui/dashboard
       tag: latest
     kong:
       enabled: true
