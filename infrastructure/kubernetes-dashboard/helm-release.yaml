@@ -14,7 +14,7 @@ spec:
         name: kubernetes-dashboard-repository
   upgrade:
     remediation:
-      remediateLastFailuer: false
+      remediateLastFailure: false
   values:
     kong:
       enabled: true
