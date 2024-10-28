@@ -1,0 +1,31 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: registry
+  namespace: registry
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: docker-registry
+      version: "*"
+      sourceRef:
+        kind: HelmRepository
+        name: registry-repository
+  upgrade:
+    remediation:
+      remediateLastFailure: true
+  values:
+    replicaCount: 3
+    persistence:
+      enabled: true
+      size: 10Gi
+      deleteEnabled: true
+      storageClass: nfs-csi
+      accessMode: 'ReadWriteOnce'
+    garbageCollect:
+      enabled: true
+      deleteUntagged: true
+      schedule: "0 1 * * *"
+      resources: {}
+
