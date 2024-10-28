@@ -14,8 +14,11 @@ spec:
         name: kubernetes-dashboard-repository
   upgrade:
     remediation:
-      remediateLastFailure: false
+      remediateLastFailure: true
   values:
+    image:
+      repository: kubernetes/dashboard
+      tag: latest
     kong:
       enabled: true
       proxy:
