@@ -22,7 +22,7 @@ spec:
       size: 10Gi
       deleteEnabled: true
       storageClass: nfs-csi
-      existingClaim: docker-registry-pv-claim
+      # existingClaim: registry-pv-claim
       accessMode: 'ReadWriteOnce'
     garbageCollect:
       enabled: true
