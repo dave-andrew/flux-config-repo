@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: kubernetes-registry
+  name: registry
   namespace: registry
 spec:
   interval: 30m
@@ -11,7 +11,7 @@ spec:
       version: "*"
       sourceRef:
         kind: HelmRepository
-        name: kubernetes-registry-repository
+        name: registry-repository
   upgrade:
     remediation:
       remediateLastFailure: true
