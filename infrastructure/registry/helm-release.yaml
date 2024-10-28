@@ -7,7 +7,7 @@ spec:
   interval: 30m
   chart:
     spec:
-      chart: twuni/docker-registry
+      chart: docker-registry
       version: "*"
       sourceRef:
         kind: HelmRepository
