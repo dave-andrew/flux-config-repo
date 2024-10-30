@@ -28,4 +28,7 @@ spec:
       deleteUntagged: true
       schedule: "0 1 * * *"
       resources: {}
+    proxy:
+      enabled: true
+      remoteurl: https://registry.kube.slc.net
 
