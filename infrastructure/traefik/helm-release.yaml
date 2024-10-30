@@ -17,6 +17,9 @@ spec:
       remediateLastFailure: true
   values:
     replicas: 3
+    provider:
+      kubernetesGateway:
+        enabled: true
     gateway:
       listeners:
         websecure:
