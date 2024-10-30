@@ -31,7 +31,7 @@ spec:
     proxy:
       enabled: true
       remoteurl: https://registry.kube.slc.net
-    extraEnv:
+    extraEnvVars:
       - name: REGISTRY_PROXY_HEADERS_ACCESS_CONTROL_ALLOW_ORIGIN
         value: "http://registry.kube.slc.net"
       - name: REGISTRY_PROXY_HEADERS_ACCESS_CONTROL_ALLOW_METHODS
