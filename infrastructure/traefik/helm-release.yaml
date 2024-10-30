@@ -23,6 +23,8 @@ spec:
     gateway:
       listeners:
         websecure:
+          port: 8443
+          procotol: HTTPS
           certificateRefs:
             - name: "traefik-tls-secret"    # Got from secretName containing tls.crt and tls.key 
               namespace: traefik            # Got from namespace where secret is deployed
