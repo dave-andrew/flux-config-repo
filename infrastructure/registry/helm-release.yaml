@@ -31,15 +31,15 @@ spec:
     proxy:
       enabled: true
       remoteurl: https://registry.kube.slc.net
-    # extraVolumes:
-    # - name: registry-cert
-    #   secret:
-    #     secretName: wildcard-kube
-    #     items:
-    #       - key: wildcard.kube.slc.net.crt
-    #         path: wildcard.kube.slc.net.crt
-    #         mode: 511
-    # extraVolumeMounts:
-    #   - mountPath: /etc/ssl/certs/wildcard.kube.slc.net.crt
-    #     name: wildcard-kube
-    #     readOnly: true
+    extraVolumes:
+    - name: registry-cert
+      secret:
+        secretName: wildcard-kube
+        items:
+          - key: wildcard.kube.slc.net.crt
+            path: wildcard.kube.slc.net.crt
+            mode: 511
+    extraVolumeMounts:
+      - mountPath: /etc/ssl/certs/wildcard.kube.slc.net.crt
+        name: registry-cert
+        readOnly: true
