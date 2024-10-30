@@ -16,7 +16,8 @@ spec:
     remediation:
       remediateLastFailure: true
   values:
-    replicas: 3
+    deployment:
+      replicas: 3
     provider:
       kubernetesGateway:
         enabled: true
