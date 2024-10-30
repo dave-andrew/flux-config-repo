@@ -40,6 +40,6 @@ spec:
             path: wildcard.kube.slc.net.crt
             mode: 511
     extraVolumeMounts:
-      - mountPath: /etc/ssl/certs/wildcard.kube.slc.net.crt
+      - mountPath: /etc/ssl/certs
         name: registry-cert
         readOnly: true
