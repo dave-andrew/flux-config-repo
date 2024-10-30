@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: dashboard-registry
+  namespace: registry
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: docker-registry-ui
+      version: "*"
+      sourceRef:
+        kind: HelmRepository
+        name: dashboard-registry-repository
+  upgrade:
+    remediation:
+      remediateLastFailure: true
+  values:
+    ui:
+      replicas: 3
+      title: "NA Docker Registry"
+      dockerRegistryUrl: https://registry.kube.slc.net
+      deleteImages: true
