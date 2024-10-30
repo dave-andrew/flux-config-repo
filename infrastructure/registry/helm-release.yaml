@@ -7,11 +7,11 @@ spec:
   interval: 30m
   chart:
     spec:
-      chart: docker-registry-ui
+      chart: docker-registry
       version: "*"
       sourceRef:
         kind: HelmRepository
-        name: dashboard-registry-repository
+        name: registry-repository
   upgrade:
     remediation:
       remediateLastFailure: true
