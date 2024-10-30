@@ -31,6 +31,8 @@ spec:
     proxy:
       enabled: true
       remoteurl: https://registry.kube.slc.net
+      username: slc
+      password: slc
     extraVolumes:
     - name: registry-cert
       secret:
