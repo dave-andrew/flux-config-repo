@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - helm-repository.yaml
   - helm-release.yaml
-  # - httproute.yaml
-  # - httpsroute.yaml
+  - httproute.yaml
+  - httpsroute.yaml

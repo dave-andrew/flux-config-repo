@@ -17,5 +17,5 @@ spec:
         type: PathPrefix
         value: /
     backendRefs:
-    - name: dashboard-service
+    - name: dashboard-registry-docker-registry-ui-user-interface
       port: 80
