@@ -31,6 +31,13 @@ spec:
     proxy:
       enabled: true
       remoteurl: https://registry.kube.slc.net
+    extraEnv:
+      - name: REGISTRY_PROXY_HEADERS_ACCESS_CONTROL_ALLOW_ORIGIN
+        value: "http://registry.kube.slc.net"
+      - name: REGISTRY_PROXY_HEADERS_ACCESS_CONTROL_ALLOW_METHODS
+        value: "GET, HEAD, DELETE, PUT, OPTIONS"
+      - name: REGISTRY_PROXY_HEADERS_ACCESS_CONTROL_ALLOW_HEADERS
+        value: "Authorization"
     extraVolumes:
     - name: registry-cert
       secret:
