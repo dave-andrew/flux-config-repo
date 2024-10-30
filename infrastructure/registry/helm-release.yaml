@@ -30,7 +30,7 @@ spec:
       resources: {}
     proxy:
       enabled: true
-      remoteurl: https://registry.kube.slc.net
+      remoteurl: http://registry.kube.slc.net
     extraVolumes:
     - name: registry-cert
       secret:
