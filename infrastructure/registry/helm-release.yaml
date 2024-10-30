@@ -1,13 +1,13 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: registry
-  namespace: registry
+  name: traefik
+  namespace: traefik
 spec:
   interval: 30m
   chart:
     spec:
-      chart: docker-registry
+      chart: 
       version: "*"
       sourceRef:
         kind: HelmRepository
