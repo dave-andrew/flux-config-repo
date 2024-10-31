@@ -15,20 +15,23 @@ spec:
   upgrade:
     remediation:
       remediateLastFailure: true
+  reconcileStrategy: Apply
   values:
     deployment:
       replicas: 3
     gateway:
       listeners:
         web:
+          port: 8000
+          protocol: HTTP
           hostname: "*.kube.slc.net"
         websecure:
           port: 8443
-          procotol: HTTPS
+          protocol: HTTPS  # Corrected the spelling here
           hostname: "*.kube.slc.net"
           certificateRefs:
-            - name: traefik-tls-secret      # Got from secretName containing tls.crt and tls.key
-              namespace: traefik            # Got from namespace where secret is deployed
+            - name: traefik-tls-secret      # Refers to the secret containing tls.crt and tls.key
+              namespace: traefik            # Namespace where the secret is deployed
     providers:
       kubernetesGateway:
         enabled: true
