@@ -18,14 +18,17 @@ spec:
   values:
     deployment:
       replicas: 3
-    providers:
-      kubernetesGateway:
-        enabled: true
     gateway:
       listeners:
+        web:
+          hostname: "*.kube.slc.net"
         websecure:
           port: 8443
           procotol: HTTPS
+          hostname: "*.kube.slc.net"
           certificateRefs:
-            - name: "traefik-tls-secret"    # Got from secretName containing tls.crt and tls.key 
+            - name: traefik-tls-secret      # Got from secretName containing tls.crt and tls.key
               namespace: traefik            # Got from namespace where secret is deployed
+    providers:
+      kubernetesGateway:
+        enabled: true
