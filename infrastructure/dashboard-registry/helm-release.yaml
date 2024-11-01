@@ -19,8 +19,7 @@ spec:
     ui:
       replicas: 1
       title: "NA Docker Registry"
-      dockerRegistryUrl: https://registry.kube.slc.net
+      dockerRegistryUrl: http://DAFFODIL.ad.slc.net:5000
       deleteImages: true
     registry:
-      enabled: true
-      
+      enabled: false

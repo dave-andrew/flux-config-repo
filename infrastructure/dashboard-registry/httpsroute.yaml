@@ -16,7 +16,7 @@ spec:
   - matches:
     - path:
         type: PathPrefix
-        value: /
+        value: /v2/
     backendRefs:
     - name: dashboard-registry-docker-registry-ui-registry-server
       port: 5000
