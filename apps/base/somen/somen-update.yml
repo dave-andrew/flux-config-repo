@@ -1,0 +1,18 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageUpdateAutomation
+metadata:
+  name: somen-update
+spec:
+  interval: 30m
+  sourceRef:
+    kind: GitRepository
+    name: flux-config-repo
+  git:
+    commit:
+      author:
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
+    push:
+      branch: main
+  update:
+    path: ./

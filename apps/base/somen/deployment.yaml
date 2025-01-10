@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: somen-frontend
-          image: DAFFODIL.ad.slc.net:5000/slc/somen-front-end:latest
+          image: registry.kube.slc.net/slc/somen-front-end:0.0.0
           imagePullPolicy: Always
           envFrom:
           - secretRef:
