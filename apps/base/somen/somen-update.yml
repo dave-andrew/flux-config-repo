@@ -3,7 +3,7 @@ kind: ImageUpdateAutomation
 metadata:
   name: somen-update
 spec:
-  interval: 30m
+  interval: 1m
   sourceRef:
     kind: GitRepository
     name: flux-system

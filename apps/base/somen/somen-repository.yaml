@@ -5,7 +5,7 @@ metadata:
   name: somen-frontend-repo
 spec:
   image: registry.kube.slc.net/slc/somen-front-end
-  interval: 1h
+  interval: 1m
   provider: generic
   certSecretRef:
     name: slc-na-tls
