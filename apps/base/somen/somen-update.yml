@@ -6,7 +6,8 @@ spec:
   interval: 30m
   sourceRef:
     kind: GitRepository
-    name: flux-config-repo
+    name: flux-system
+    namespace: flux-system
   git:
     commit:
       author:
