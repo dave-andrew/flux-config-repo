@@ -9,5 +9,5 @@ spec:
   provider: generic
   certSecretRef:
     name: slc-na-tls
-  proxySecretRef:
-    name: registry-proxy
+  secretRef:
+    name: secret-docker
