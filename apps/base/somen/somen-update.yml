@@ -16,4 +16,4 @@ spec:
     push:
       branch: main
   update:
-    path: ./
+    path: ./apps/base/somen/deployment.yaml
