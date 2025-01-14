@@ -1,0 +1,13 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: traefik-policy
+  namespace: traefik
+spec:
+  imageRepositoryRef:
+    name: traefik-repository
+    namespace: traefik
+  policy:
+    semver:
+      range: ">=0.0.0"
