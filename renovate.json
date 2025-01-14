@@ -3,6 +3,9 @@
   "extends": [
     "config:recommended"
   ],
+  "flux": {
+    "fileMatch": ["\\.yaml$"]
+  },
   "kubernetes": {
     "fileMatch": ["\\.yaml$"]
   }
