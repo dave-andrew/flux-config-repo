@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: traefik
-      version: 33.2.1 # {"$imagepolicy": "traefik:traefik-policy"}
+      version: "*"
       sourceRef:
         kind: HelmRepository
         name: traefik-repository
