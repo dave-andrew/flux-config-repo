@@ -28,7 +28,6 @@ spec:
         enabled: true
         hosts:
           - dashboard.kube.slc.net
-          - localhost
         ingressClassName: internal-nginx
         useDefaultIngressClass: true
         issuer:
