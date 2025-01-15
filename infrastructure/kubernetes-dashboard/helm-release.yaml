@@ -20,7 +20,7 @@ spec:
       enabled: true
       proxy:
         enabled: true
-        type: LoadBalancer
+        type: ClusterIP
         ingress:
           enabled: true
           ingressClassName: traefik
