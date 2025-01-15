@@ -1,0 +1,13 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: somen-backend-repo
+spec:
+  image: registry.kube.slc.net/slc/somen-back-end
+  interval: 1m
+  provider: generic
+  certSecretRef:
+    name: slc-na-tls
+  secretRef:
+    name: secret-docker
