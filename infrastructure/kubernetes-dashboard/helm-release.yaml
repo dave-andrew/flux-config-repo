@@ -34,7 +34,8 @@ spec:
         hosts:
           - dashboard-try.kube.slc.net
         ingressClassName: traefik
-        useDefaultIngressClass: true
+        useDefaultIngressClass: false
+        useDefaultAnnotations: false
         issuer:
           name: selfsigned
           scope: disabled
