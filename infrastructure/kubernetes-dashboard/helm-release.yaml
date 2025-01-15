@@ -17,10 +17,10 @@ spec:
       remediateLastFailure: true
   values:
     kong:
-      enabled: true
-      proxy:
-        enabled: true
-        type: LoadBalancer
+      enabled: false
+      # proxy:
+      #   enabled: true
+      #   type: LoadBalancer
         
 
     # app:
