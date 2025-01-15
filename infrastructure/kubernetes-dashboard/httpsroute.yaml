@@ -16,7 +16,7 @@ spec:
   - matches:
     - path:
         type: PathPrefix
-        value: /
+        value: /dashboard
     backendRefs:
     - name: kubernetes-dashboard-kong-proxy
       port: 443
