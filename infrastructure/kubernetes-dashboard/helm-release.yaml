@@ -17,8 +17,12 @@ spec:
       remediateLastFailure: true
   values:
     kong:
-      enabled: true
+      enabled: false
       proxy:
         type: LoadBalancer
         http:
           enabled: true
+        tls:
+          enabled: true
+          client:
+            secretName: dashboard-tls-secret
