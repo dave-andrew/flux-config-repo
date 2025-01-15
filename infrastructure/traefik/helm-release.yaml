@@ -19,6 +19,13 @@ spec:
   values:
     deployment:
       replicas: 3
+    ports:
+      web:
+        forwardedHeaders:
+          insecure: true
+      websecure:
+        forwardedHeaders:
+          insecure: true
     gateway:
       listeners:
         web:
