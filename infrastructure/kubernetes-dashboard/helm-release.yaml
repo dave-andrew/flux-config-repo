@@ -23,7 +23,7 @@ spec:
         type: LoadBalancer
         ingress:
           enabled: true
-          ingressClassName: kong-ingress-class
+          ingressClassName: traefik
           tls: dashboard-tls-secret
         
 
