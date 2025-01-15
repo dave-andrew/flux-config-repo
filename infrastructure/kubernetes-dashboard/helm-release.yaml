@@ -18,6 +18,9 @@ spec:
   values:
     kong:
       enabled: true
+      admin:
+        ingress:
+          tls: dashboard-tls-secret
       proxy:
         type: LoadBalancer
         # http:
