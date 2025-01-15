@@ -1,54 +1,54 @@
-# apiVersion: helm.toolkit.fluxcd.io/v2
-# kind: HelmRelease
-# metadata:
-#   name: kubernetes-dashboard
-#   namespace: kubernetes-dashboard
-# spec:
-#   interval: 30m
-#   chart:
-#     spec:
-#       chart: kubernetes-dashboard
-#       version: "*"
-#       sourceRef:
-#         kind: HelmRepository
-#         name: kubernetes-dashboard-repository
-#   upgrade:
-#     remediation:
-#       remediateLastFailure: true
-#   values:
-#     kong:
-#       enabled: true
-#       proxy:
-#         enabled: true
-#         type: LoadBalancer
-#         ingress:
-#           enabled: true
-#           ingressClassName: kong-ingress-class
-#           tls: dashboard-tls-secret
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: kubernetes-dashboard
+      version: "*"
+      sourceRef:
+        kind: HelmRepository
+        name: kubernetes-dashboard-repository
+  upgrade:
+    remediation:
+      remediateLastFailure: true
+  values:
+    kong:
+      enabled: true
+      proxy:
+        enabled: true
+        type: LoadBalancer
+        ingress:
+          enabled: true
+          ingressClassName: kong-ingress-class
+          tls: dashboard-tls-secret
         
 
-    # app:
-    #   ingress:
-    #     enabled: true
-    #     hosts:
-    #       - dashboard.kube.slc.net
-    #     ingressClassName: internal-nginx
-    #     useDefaultIngressClass: true
-    #     issuer:
-    #       name: selfsigned
-    #       scope: disabled
-    #     tls:
-    #       enabled: true
-    #       secretName: dashboard-tls-secret
+    app:
+      ingress:
+        enabled: true
+        hosts:
+          - dashboard.kube.slc.net
+        ingressClassName: internal-nginx
+        useDefaultIngressClass: true
+        issuer:
+          name: selfsigned
+          scope: disabled
+        tls:
+          enabled: true
+          secretName: dashboard-tls-secret
 
-    # kong:
-    #   enabled: false
+    kong:
+      enabled: false
 
-    # nginx:
-    #   enabled: true
-    #   controller:
-    #     service:
-    #       type: LoadBalancer
-    #   ingressClassResource:
-    #     name: internal-nginx
-    #     default: true
+    nginx:
+      enabled: true
+      controller:
+        service:
+          type: LoadBalancer
+      ingressClassResource:
+        name: internal-nginx
+        default: true
