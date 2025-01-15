@@ -31,10 +31,15 @@ spec:
       hosts:
         - dashboard.kube.slc.net
         - localhost
+      ingressClassName: internal-nginx
+      useDefaultIngressClass: true
       tls:
         enabled: true
         secretName: dashboard-tls-secret
-        
+      issuer:
+        name: selfsigned
+        scope: disabled
+
     kong:
       enabled: false
 
@@ -43,3 +48,6 @@ spec:
       controller:
         service:
           type: LoadBalancer
+      ingressClassResource:
+        name: internal-nginx
+        default: true
