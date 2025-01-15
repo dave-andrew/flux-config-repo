@@ -18,8 +18,8 @@ spec:
   values:
     kong:
       enabled: true
-      # proxy:
-      #   enabled: true
+      proxy:
+        enabled: true
       #   type: LoadBalancer
         
 
