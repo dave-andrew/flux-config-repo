@@ -23,7 +23,7 @@ spec:
         type: ClusterIP
         ingress:
           enabled: true
-          ingressClassName: traefik
+          ingressClassName: kong-ingress-class
           hostname: dashboard.kube.slc.net
           path: /
           pathType: ImplementationSpecific
