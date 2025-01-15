@@ -24,18 +24,13 @@ spec:
         ingress:
           enabled: true
           ingressClassName: traefik
-        hosts:
-        - host: dashboard.kube.slc.net
-          paths:
-          - path: /
-            pathType: ImplementationSpecific
-            backend:
-              serviceName: kubernetes-dashboard-kong-proxy
-              servicePort: 443
-        tls:
-        - secretName: dashboard-tls-secret
-          hosts:
-          - dashboard.kube.slc.net
+          hostname: dashboard.kube.slc.net
+          path: /
+          pathType: ImplementationSpecific
+          tls:
+          - secretName: dashboard-tls-secret
+            hosts:
+            - dashboard.kube.slc.net
         
 
     # app:
