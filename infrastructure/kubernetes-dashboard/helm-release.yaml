@@ -26,19 +26,20 @@ spec:
     #       enabled: true
     #       client:
     #         secretName: "dashboard-tls-secret"
-    ingress:
-      enabled: true
-      hosts:
-        - dashboard.kube.slc.net
-        - localhost
-      ingressClassName: internal-nginx
-      useDefaultIngressClass: true
-      tls:
+    app:
+      ingress:
         enabled: true
-        secretName: dashboard-tls-secret
-      issuer:
-        name: selfsigned
-        scope: disabled
+        hosts:
+          - dashboard.kube.slc.net
+          - localhost
+        ingressClassName: internal-nginx
+        useDefaultIngressClass: true
+        tls:
+          enabled: true
+          secretName: dashboard-tls-secret
+        issuer:
+          name: selfsigned
+          scope: disabled
 
     kong:
       enabled: false
