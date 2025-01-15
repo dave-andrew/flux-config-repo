@@ -8,7 +8,7 @@ metadata:
 spec:
   parentRefs:
   - name: traefik-gateway
-    sectionName: websecure
+    sectionName: web
     namespace: traefik
   hostnames:
   - dashboard-try.kube.slc.net
