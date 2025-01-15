@@ -19,24 +19,30 @@ spec:
     kong:
       enabled: true
       proxy:
-        enabled: true
+        type: ClusterIP
+        http:
+          enabled: false
+        tls:
+          enabled: true
+          secretName: dashboard-tls-secret
       #   type: LoadBalancer
         
 
-    # app:
-    #   ingress:
-    #     enabled: true
-    #     hosts:
-    #       - dashboard.kube.slc.net
-    #     ingressClassName: internal-nginx
-    #     useDefaultIngressClass: true
-    #     issuer:
-    #       name: selfsigned
-    #       scope: disabled
-    #     tls:
-    #       enabled: true
-    #       secretName: dashboard-tls-secret
-
+    app:
+      ingress:
+        enabled: true
+        hosts:
+          - dashboard-try.kube.slc.net
+        ingressClassName: traefik
+        useDefaultIngressClass: true
+        issuer:
+          name: selfsigned
+          scope: disabled
+        tls:
+          enabled: true
+          secretName: dashboard-tls-secret
+        annotations:
+          traefik.ingress.kubernetes.io/router.entrypoints: websecure
     # kong:
     #   enabled: false
 
