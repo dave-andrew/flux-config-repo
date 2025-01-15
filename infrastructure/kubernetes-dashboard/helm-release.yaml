@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: kubernetes-dashboard
-      version: 7.10.0
+      version: 7.10.1
       sourceRef:
         kind: HelmRepository
         name: kubernetes-dashboard-repository
@@ -19,31 +19,33 @@ spec:
     kong:
       enabled: true
       proxy:
-        type: ClusterIP
-        http:
-          enabled: false
-        tls:
-          enabled: true
-          secretName: dashboard-tls-secret
+        type: LoadBalancer
+        # http:
+        #   enabled: false
+        # tls:
+        #   enabled: true
+        #   secretName: dashboard-tls-secret
       #   type: LoadBalancer
         
 
-    app:
-      ingress:
-        enabled: true
-        hosts:
-          - dashboard-try.kube.slc.net
-        ingressClassName: traefik
-        useDefaultIngressClass: false
-        useDefaultAnnotations: false
-        issuer:
-          name: selfsigned
-          scope: disabled
-        tls:
-          enabled: true
-          secretName: dashboard-tls-secret
-        annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    # app:
+    #   ingress:
+    #     enabled: true
+    #     hosts:
+    #       - dashboard-try.kube.slc.net
+    #     ingressClassName: traefik
+    #     useDefaultIngressClass: false
+    #     useDefaultAnnotations: false
+    #     issuer:
+    #       name: selfsigned
+    #       scope: disabled
+    #     tls:
+    #       enabled: true
+    #       secretName: dashboard-tls-secret
+    #     annotations:
+    #       traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    #       traefik.ingress.kubernetes.io/router.tls: "true" 
+          
     # kong:
     #   enabled: false
 
