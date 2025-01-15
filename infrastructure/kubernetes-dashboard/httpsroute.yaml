@@ -1,0 +1,22 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: kubernetes-dashboard-httpsroute
+  namespace: kubernetes-dashboard
+  labels:
+    gateway: traefik-gateway
+spec:
+  parentRefs:
+  - name: traefik-gateway
+    sectionName: websecure
+    namespace: traefik
+  hostnames:
+  - dashboard-try.kube.slc.net
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: kubernetes-dashboard-kong-proxy
+      port: 443
