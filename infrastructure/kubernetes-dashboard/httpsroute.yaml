@@ -11,7 +11,7 @@ spec:
     sectionName: websecure
     namespace: traefik
   hostnames:
-  - dashboard-try.kube.slc.net
+  - dashboard.kube.slc.net
   rules:
   - matches:
     - path:
