@@ -17,7 +17,7 @@ spec:
       remediateLastFailure: true
   values:
     kong:
-      enabled: false
+      enabled: true
       proxy:
         type: LoadBalancer
         http:
