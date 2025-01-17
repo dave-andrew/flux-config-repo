@@ -9,9 +9,11 @@
   "kubernetes": {
     "fileMatch": ["\\.yaml$"]
   },
-  "hostRules": {
-    "matchHost": "https://registry.kube.slc.net",
-    "username": "admin",
-    "password": "Harbor12345"
-  }
+  "hostRules": [
+     {
+      "matchHost": "https://registry.kube.slc.net",
+      "username": "admin",
+      "password": "Harbor12345"
+     }
+  ]
 }
