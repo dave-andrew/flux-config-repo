@@ -8,5 +8,10 @@
   },
   "kubernetes": {
     "fileMatch": ["\\.yaml$"]
-  }
+  },
+  "hostRules": [
+    {
+      "matchHost": "registry.kube.slc.net",
+    }
+  ]
 }
