@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: somen-frontend
-          image: registry.kube.slc.net/slc/somen-front-end:1.0.7 # {"$imagepolicy": "production:somen-frontend-policy"}
+          image: registry.kube.slc.net/slc/somen-front-end:1.0.6 # temp change to dev build
           imagePullPolicy: Always
           envFrom:
             - secretRef:
