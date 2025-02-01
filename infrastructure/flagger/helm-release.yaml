@@ -24,3 +24,6 @@ spec:
   values:
     nodeSelector:
       kubernetes.io/os: linux
+    prometheus:
+      install: true
+    meshProvider: kubernetes
