@@ -3,7 +3,7 @@ kind: ImageRepository
 metadata:
   name: call-na-frontend-repo
 spec:
-  image: registry.kube.slc.net/slc/somen-front-end
+  image: registry.kube.slc.net/slc/call-na-frontend
   interval: 1m
   provider: generic
   certSecretRef:
