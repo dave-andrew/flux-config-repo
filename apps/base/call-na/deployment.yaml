@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: call-na-frontend
-          image: registry.kube.slc.net/slc/call-na-frontend:0.0.3
+          image: registry.kube.slc.net/slc/call-na-frontend:0.0.3 # {"$imagepolicy": "<image-policy-namespace>:<image-policy-name>"}
           imagePullPolicy: Always
           envFrom:
           - secretRef:
