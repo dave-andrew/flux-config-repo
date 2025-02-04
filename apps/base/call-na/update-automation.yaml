@@ -16,4 +16,4 @@ spec:
     push:
       branch: main
   update:
-    path: ./apps/base/somen
+    path: ./apps/base/call-na
