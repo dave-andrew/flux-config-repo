@@ -21,4 +21,4 @@ spec:
               name: call-na-secret
           ports:
             - protocol: TCP
-              containerPort: 80
+              containerPort: 3000
