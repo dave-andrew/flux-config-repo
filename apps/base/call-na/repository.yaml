@@ -1,0 +1,12 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: call-na-frontend-repo
+spec:
+  image: registry.kube.slc.net/slc/somen-front-end
+  interval: 1m
+  provider: generic
+  certSecretRef:
+    name: slc-na-tls
+  secretRef:
+    name: flux-image-pull-secret
