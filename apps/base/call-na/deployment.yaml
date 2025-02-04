@@ -14,11 +14,11 @@ spec:
     spec:
       containers:
         - name: call-na-frontend
-          image: registry.kube.slc.net/slc/call-na-frontend:0.1.1 # {"$imagepolicy": "production:call-na-frontend-policy"}
+          image: registry.kube.slc.net/slc/call-na-frontend:0.1.2 # {"$imagepolicy": "production:call-na-frontend-policy"}
           imagePullPolicy: Always
           envFrom:
-          - secretRef:
-              name: call-na-secret
+            - secretRef:
+                name: call-na-secret
           ports:
             - protocol: TCP
               containerPort: 80
