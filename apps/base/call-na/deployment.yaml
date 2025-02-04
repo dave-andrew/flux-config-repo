@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: call-na-frontend
-          image: DAFFODIL.ad.slc.net:5000/slc/call-na-frontend:latest
+          image: registry.kube.slc.net/slc/call-na-frontend:0.0.3
           imagePullPolicy: Always
           envFrom:
           - secretRef:
