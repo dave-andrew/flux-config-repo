@@ -1,0 +1,9 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: call-na-admin-ipwhitelist
+  namespace: traefik
+spec:
+  ipWhiteList:
+    sourceRange:
+      - 10.22.65.0/24
