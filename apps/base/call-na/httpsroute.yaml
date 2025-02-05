@@ -15,6 +15,22 @@ spec:
   - matches:
     - path:
         type: PathPrefix
+        value: /admin
+    filters:
+    - type: ExtensionRef
+      extensionRef:
+        group: traefik.io
+        kind: Middleware
+        name: call-na-admin-ipwhitelist
+        namespace: traefik
+    backendRefs:
+    - name: call-na-frontend-service
+      port: 6969
+
+  
+  - matches:
+    - path:
+        type: PathPrefix
         value: /
     backendRefs:
     - name: call-na-frontend-service
