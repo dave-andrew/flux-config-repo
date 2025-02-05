@@ -4,7 +4,6 @@ metadata:
   name: call-na-frontend-service
 spec:
   type: ClusterIP
-  externalTrafficPolicy: Local
   selector:
     app: call-na-frontend
   ports:
