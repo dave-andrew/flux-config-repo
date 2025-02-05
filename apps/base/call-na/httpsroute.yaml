@@ -22,15 +22,14 @@ spec:
         set:
         - name: X-Admin-Access
           value: "Restricted"
-    backendRefs:
-    - name: call-na-frontend-service
-      port: 6969
-    filters:
     - type: ExtensionRef
       extensionRef:
         kind: Middleware
         name: call-na-admin-ipwhitelist
         namespace: traefik
+    backendRefs:
+    - name: call-na-frontend-service
+      port: 6969
   - matches:
     - path:
         type: PathPrefix
