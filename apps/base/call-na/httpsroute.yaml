@@ -22,7 +22,6 @@ spec:
         group: traefik.io
         kind: Middleware
         name: call-na-admin-ipwhitelist
-        namespace: traefik
     backendRefs:
     - name: call-na-frontend-service
       port: 6969
