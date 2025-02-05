@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: ruman-frontend
-          image: DAFFODIL.ad.slc.net:5000/slc/ruman-frontend:latest
+          image: registry.kube.slc.net/slc/ruman-frontend:latest
           imagePullPolicy: Always
           envFrom:
           - secretRef:
