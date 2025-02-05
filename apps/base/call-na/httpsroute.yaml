@@ -1,35 +1,17 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
+  name: call-na-frontend-httpsroute
   labels:
     gateway: traefik-gateway
-  name: call-na-frontend-httpsroute
 spec:
-  hostnames:
-  - call.kube.slc.net
   parentRefs:
   - name: traefik-gateway
-    namespace: traefik
     sectionName: websecure
+    namespace: traefik
+  hostnames:
+  - call.kube.slc.net
   rules:
-  - matches:
-    - path:
-        type: PathPrefix
-        value: /admin
-    filters:
-    - type: RequestHeaderModifier
-      requestHeaderModifier:
-        set:
-        - name: X-Admin-Access
-          value: "Restricted"
-    - type: ExtensionRef
-      extensionRef:
-        kind: Middleware
-        name: call-na-admin-ipwhitelist
-        namespace: traefik
-    backendRefs:
-    - name: call-na-frontend-service
-      port: 6969
   - matches:
     - path:
         type: PathPrefix
