@@ -10,4 +10,4 @@ spec:
   certSecretRef:
     name: slc-na-tls
   secretRef:
-    name: secret-docker
+    name: flux-image-pull-secret
